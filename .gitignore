@@ -17,3 +17,4 @@ npm-debug.log*
 
 # Node (future-proof)
 node_modules/
+.vercel
