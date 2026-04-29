@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Claude Code local state
+.claude/
+
+# Vercel
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.idea/
+.vscode/
+
+# Node (future-proof)
+node_modules/

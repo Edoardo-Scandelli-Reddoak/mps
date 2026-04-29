@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grazie! Richiesta ricevuta — MPS Ufficio</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:    #4a47de;
+  --yellow:  #fdfd27;
+  --white:   #ffffff;
+  --black:   #0d0d0d;
+  --blue-dk: #3835c4;
+  --off:     #f4f4f4;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--blue);
+  color: var(--black);
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px;
+  height: 64px;
+  background: var(--blue);
+}
+.logo {
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+.logo span { color: var(--yellow); }
+
+/* ─── HERO TY ─── */
+.ty-hero {
+  background: var(--blue);
+  padding: 64px 48px 60px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.ty-bg-text {
+  position: absolute;
+  bottom: 40px; left: -10px;
+  font-size: clamp(120px, 20vw, 240px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+.ty-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+}
+.ty-icon {
+  width: 96px; height: 96px;
+  background: var(--yellow);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 36px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--black);
+  animation: pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.ty-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 28px;
+}
+.ty-tag::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.4; transform:scale(1.5); }
+}
+.ty-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+.ty-hero h1 .yellow { color: var(--yellow); }
+.ty-sub {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  max-width: 580px;
+  line-height: 1.75;
+  margin: 0 auto 44px;
+}
+.ty-cta {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  text-decoration: none;
+  padding: 16px 36px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+.ty-cta:hover { background: #e8e800; transform: translateY(-2px); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
+  nav { padding: 0 20px; height: 60px; }
+  .logo { font-size: 1rem; }
+
+  .ty-hero { padding: 60px 20px 60px; }
+  .ty-inner { padding: 24px 0; }
+  .ty-icon { width: 80px; height: 80px; font-size: 2.4rem; margin-bottom: 28px; }
+  .ty-sub { font-size: 0.95rem; margin-bottom: 36px; }
+  .ty-cta { padding: 16px 28px; }
+}
+
+@media (max-width: 480px) {
+  .ty-hero h1 { font-size: clamp(2.2rem, 11vw, 3.2rem); }
+  .ty-tag { font-size: 0.62rem; padding: 5px 12px; }
+  .ty-cta { width: 100%; padding: 16px 20px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">MPS<span>.</span>ufficio</a>
+</nav>
+
+<!-- HERO TY -->
+<section class="ty-hero">
+  <div class="ty-bg-text">GRAZIE</div>
+  <div class="ty-inner">
+    <div class="ty-icon">✓</div>
+    <span class="ty-tag">Richiesta ricevuta</span>
+    <h1>GRAZIE!<br>A PRESTO <span class="yellow">CON IL TUO PREVENTIVO</span></h1>
+    <p class="ty-sub">
+      Abbiamo ricevuto la tua richiesta. Un nostro consulente ti contatterà
+      entro <strong style="color: var(--yellow);">poche ore lavorative</strong> con un preventivo personalizzato,
+      gratuito e senza alcun impegno.
+    </p>
+    <a href="index.html" class="ty-cta">← Torna alla home</a>
+  </div>
+</section>
+
+</body>
+</html>
