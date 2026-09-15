@@ -357,14 +357,9 @@ h2 .yb { background: var(--yellow); color: var(--black) !important; padding: 0 8
 .svc:hover .svc-model-name { color: var(--white); }
 .svc-model-tag {
   font-size: 0.7rem; font-weight: 600; color: rgba(0,0,0,0.45);
-  transition: color 0.25s; flex: 1; text-align: center; padding: 0 8px;
+  transition: color 0.25s; flex: 1; text-align: right; padding: 0 0 0 10px;
 }
 .svc:hover .svc-model-tag { color: rgba(255,255,255,0.5); }
-.svc-model-price {
-  font-size: 0.78rem; font-weight: 900; color: var(--blue); transition: color 0.25s;
-  white-space: nowrap;
-}
-.svc:hover .svc-model-price { color: var(--yellow); }
 .svc-ul {
   list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px;
 }
@@ -428,6 +423,11 @@ h2 .yb { background: var(--yellow); color: var(--black) !important; padding: 0 8
 .plan-price.custom { font-size: 2rem; line-height: 1.2; }
 .plan.best .plan-price { color: var(--yellow); }
 .plan-price sup { font-size: 2rem; vertical-align: super; }
+.px-da {
+  display: inline-block; font-size: 0.95rem; font-weight: 800;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  vertical-align: middle; margin-right: 6px; opacity: 0.45;
+}
 .plan-mo {
   font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.28);
   text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 30px;
@@ -694,11 +694,11 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
   display: flex; align-items: center; justify-content: space-between;
   padding-top: 24px; border-top: 1px solid #eee;
 }
-.prod-price {
-  font-size: 2.2rem; font-weight: 900; letter-spacing: -0.04em; color: var(--black);
+.prod-quote {
+  font-size: 1.15rem; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1;
+  text-transform: uppercase; color: var(--black);
 }
-.prod-price sup { font-size: 1rem; vertical-align: super; }
-.prod-price span { font-size: 0.75rem; font-weight: 600; color: rgba(0,0,0,0.35); display: block; margin-top: -4px; text-transform: uppercase; letter-spacing: 0.06em; }
+.prod-quote span { font-size: 0.75rem; font-weight: 600; color: rgba(0,0,0,0.35); display: block; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.06em; }
 .prod-cta {
   background: var(--blue); color: var(--white);
   text-decoration: none; padding: 13px 24px;
@@ -791,14 +791,14 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
     <div class="hero-content">
       <p class="hero-tag">Noleggio stampanti &amp; assistenza tecnica</p>
       <h1>STAMPA<br><span class="yellow">SENZA</span><br><span class="outline">PENSIERI.</span></h1>
-      <p class="hero-sub">Noleggio flessibile di multifunzione, laser e plotter per il tuo ufficio. Canone fisso, toner incluso, assistenza sempre attiva. Parti da soli 25€/mese.</p>
+      <p class="hero-sub">Noleggio flessibile di multifunzione, laser e plotter per il tuo ufficio. Canone fisso, toner incluso, assistenza sempre attiva. Noleggio a partire da 20€/mese.</p>
       <div class="hero-ctas">
         <a href="#prezzi" class="btn-yellow">Scopri i piani →</a>
       </div>
     </div>
     <div class="hero-card">
       <p class="hc-label">Noleggio a partire da</p>
-      <div class="hc-price"><sup>€</sup>25</div>
+      <div class="hc-price"><sup>€</sup>20</div>
       <p class="hc-period">al mese — tutto incluso</p>
       <ul class="hc-list">
         <li>Multifunzione B/N e colore</li>
@@ -817,8 +817,8 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
       <div class="sl">8:30–17:30</div>
     </div>
     <div class="hero-strip-item">
-      <div class="sn">€25</div>
-      <div class="sl">Prezzo<br>mensile da</div>
+      <div class="sn">€20</div>
+      <div class="sl">Noleggio<br>mensile da</div>
     </div>
     <div class="hero-strip-item">
       <div class="sn">MFP A4</div>
@@ -840,7 +840,7 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
     <span>Plotter HP</span><span class="dot">◆</span>
     <span>Toner Incluso</span><span class="dot">◆</span>
     <span>Zero Spese Nascoste</span><span class="dot">◆</span>
-    <span>Da 25€ / Mese</span><span class="dot">◆</span>
+    <span>Da 20€ / Mese</span><span class="dot">◆</span>
     <span>Multifunzione B/N e Colore</span><span class="dot">◆</span>
     <span>Konica Minolta — Develop</span><span class="dot">◆</span>
     <span>Installazione Gratuita</span><span class="dot">◆</span>
@@ -850,7 +850,7 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
     <span>Plotter HP</span><span class="dot">◆</span>
     <span>Toner Incluso</span><span class="dot">◆</span>
     <span>Zero Spese Nascoste</span><span class="dot">◆</span>
-    <span>Da 25€ / Mese</span><span class="dot">◆</span>
+    <span>Da 20€ / Mese</span><span class="dot">◆</span>
     <span>Multifunzione B/N e Colore</span><span class="dot">◆</span>
     <span>Konica Minolta — Develop</span><span class="dot">◆</span>
     <span>Installazione Gratuita</span><span class="dot">◆</span>
@@ -884,7 +884,7 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
           <div class="spec"><div class="spec-key">Scanner</div><div class="spec-val">DADF 80 fogli</div></div>
         </div>
         <div class="prod-footer">
-          <div class="prod-price"><sup>€</sup>25<span>al mese — IVA esclusa</span></div>
+          <div class="prod-quote">Noleggio<span>su preventivo</span></div>
           <a href="#contatti" class="prod-cta">Richiedi info</a>
         </div>
       </div>
@@ -909,7 +909,7 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
           <div class="spec"><div class="spec-key">Scanner</div><div class="spec-val">ADF 100 fogli</div></div>
         </div>
         <div class="prod-footer">
-          <div class="prod-price"><sup>€</sup>59<span>al mese — IVA esclusa</span></div>
+          <div class="prod-quote">Noleggio<span>su preventivo</span></div>
           <a href="#contatti" class="prod-cta">Richiedi info</a>
         </div>
       </div>
@@ -934,12 +934,10 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
         <div class="svc-model">
           <span class="svc-model-name">ineo+ 3321i</span>
           <span class="svc-model-tag">Colore · A4 · 33 ppm</span>
-          <span class="svc-model-price">da €25/mese</span>
         </div>
         <div class="svc-model">
           <span class="svc-model-name">ineo+ 251i</span>
           <span class="svc-model-tag">Colore · A3 · 25 ppm</span>
-          <span class="svc-model-price">da €59/mese</span>
         </div>
       </div>
       <span class="svc-badge">Konica Minolta — Develop</span>
@@ -986,7 +984,7 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
   <div class="plans">
     <div class="plan reveal">
       <p class="plan-type">Small Office</p>
-      <div class="plan-price"><sup>€</sup>25</div>
+      <div class="plan-price"><span class="px-da">da</span><sup>€</sup>20</div>
       <p class="plan-mo">al mese — IVA esclusa</p>
       <ul class="plan-feats">
         <li><span class="ck">✓</span> Stampante multifunzione A4 a colori</li>
@@ -1000,7 +998,7 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
     <div class="plan best reveal">
       <div class="plan-tag">Più scelto</div>
       <p class="plan-type">Business Color</p>
-      <div class="plan-price"><sup>€</sup>59</div>
+      <div class="plan-price"><span class="px-da">da</span><sup>€</sup>20</div>
       <p class="plan-mo">al mese — IVA esclusa</p>
       <ul class="plan-feats">
         <li><span class="ck">✓</span> Multifunzione Colore A3/A4</li>
@@ -1040,7 +1038,7 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
     <div class="contact-promises">
       <div class="cp">Risposta entro poche ore</div>
       <div class="cp">Preventivo gratuito e senza impegno</div>
-      <div class="cp">Noleggio da soli 25€ al mese</div>
+      <div class="cp">Noleggio da soli 20€ al mese</div>
       <div class="cp">Assistenza Lun–Ven 8:30–17:30</div>
     </div>
   </div>
@@ -1071,8 +1069,8 @@ footer p { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.25); 
         <label>Servizio di interesse</label>
         <select id="f-servizio" name="Servizio di interesse">
           <option value="" disabled selected>Seleziona un servizio...</option>
-          <option>Multifunzione a colori — da €25/mese</option>
-          <option>Multifunzione Colore — da €59/mese</option>
+          <option>Multifunzione a colori A4 — da €20/mese</option>
+          <option>Multifunzione a colori A3 — da €20/mese</option>
           <option>Plotter HP Grande Formato</option>
           <option>Non so ancora — voglio informazioni</option>
         </select>
